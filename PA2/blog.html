@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que el documento usa HTML5 -->
+<html lang="es"> <!-- Idioma principal del sitio: español -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Kitty Bakery — Blog</title>
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite diseño responsive -->
+  <title>Sweet Kitty Bakery — Blog</title> <!-- Título de la pestaña del navegador -->
+  
+  <!-- Ícono de la pestaña -->
   <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes de Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Archivo CSS externo -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- Encabezado principal del sitio -->
   <header id="main-header" class="site-header">
     <div class="container header-inner">
+      
+      <!-- Enlace del logotipo con ícono SVG -->
       <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <!-- Ícono tipo logotipo con degradado -->
         <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="g1" x1="0" x2="1">
@@ -24,13 +35,15 @@
           <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
           <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
         </svg>
-        <span class="brand-title">Sweet Kitty Bakery</span>
+        <span class="brand-title">Sweet Kitty Bakery</span> <!-- Nombre del sitio -->
       </a>
 
+      <!-- Botón del menú responsive (versión móvil) -->
       <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="main-nav-3" aria-label="Abrir menú">
-        <span class="hamburger"></span>
+        <span class="hamburger"></span> <!-- Icono de hamburguesa -->
       </button>
 
+      <!-- Navegación principal -->
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -44,30 +57,39 @@
     </div>
   </header>
 
+  <!-- Contenido principal -->
   <main class="container blog-section">
     <h2>Blog</h2>
     <p>Consejos, novedades y recetas exclusivas de nuestro equipo de repostería.</p>
 
+    <!-- Publicación del blog 1 -->
     <article class="blog-post">
-      <img src="img/img11.jpeg" alt="Cupcakes decorados">
-      <h2>Decoración de cupcakes: trucos y tendencias</h2>
-      <p> Aprende los mejores tips para lograr cupcakes dignos de exposición.</p>
+      <img src="img/img11.jpeg" alt="Cupcakes decorados"> <!-- Imagen del post -->
+      <h2>Decoración de cupcakes: trucos y tendencias</h2> <!-- Título del post -->
+      <p>Aprende los mejores tips para lograr cupcakes dignos de exposición.</p> <!-- Descripción -->
     </article>
 
+    <!-- Publicación del blog 2 -->
     <article class="blog-post">
-      <img src="img/img12.jpg" alt= "Decoración de tortas">
-      <h2>Cómo elegir la torta perfecta para tu evento</h2>
-      <p>Guía práctica para seleccionar el diseño y sabor ideal.</p>
+      <img src="img/img12.jpg" alt="Decoración de tortas"> <!-- Imagen del post -->
+      <h2>Cómo elegir la torta perfecta para tu evento</h2> <!-- Título -->
+      <p>Guía práctica para seleccionar el diseño y sabor ideal.</p> <!-- Descripción -->
     </article>
   </main>
 
+  <!-- Pie de página -->
   <footer id="main-footer" class="site-footer">
     <div class="container footer-inner">
+      <!-- Muestra el año actual dinámicamente -->
       <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+      <!-- Enlace de retorno al inicio -->
       <a href="index.html" class="footer-link">Volver al inicio</a>
     </div>
   </footer>
 
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <!-- Script para mostrar el año actual -->
+  <script>
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
