@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sweet Kitty Bakery - Pastelería artesanal: tortas, cupcakes y postres personalizados.">
+  <meta name="keywords" content="pastelería, tortas, cupcakes, galletas, repostería artesanal">
+  <meta name="author" content="Sweet Kitty Bakery">
+  <meta name="theme-color" content="#fff6fb">
+  <title>Sweet Kitty Bakery — Inicio</title>
+
+  <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes Google  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER (logo + nav). SVG inline cumple requisito SVG -->
+  <header id="main-header" class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <!-- SVG decorativo (logo vectorial escalable) -->
+        <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff7ab6"/>
+              <stop offset="1" stop-color="#ffd6e8"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
+          <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
+        </svg>
+        <span class="brand-title">Sweet Kitty Bakery</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO: figure + figcaption -->
+    <section id="inicio" class="hero-section container" aria-labelledby="hero-title">
+      <figure class="hero-figure">
+        <picture>
+          <img src="img/img1.webp" alt="Imagen principal de Sweet Kitty Bakery" class="hero-img" loading="lazy">
+        </picture>
+        <figcaption class="sr-only">Mostrador con productos de Sweet Kitty Bakery</figcaption>
+      </figure>
+
+      <div class="hero-text">
+        <h1 id="hero-title">Dulces que enamoran</h1>
+        <p>Pastelería artesanal · Pedidos personalizados · Ingredientes frescos</p>
+        <div class="hero-actions">
+          <a class="btn" href="productos.html">Ver productos</a>
+          <a class="btn btn-ghost" href="contacto.html">Contactar</a>
+        </div>
+
+        <ul class="hero-cats" aria-label="Categorías">
+          <li>Tortas</li>
+          <li>Cupcakes</li>
+          <li>Galletas</li>
+          <li>Postres</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="intro-products container" aria-labelledby="intro-prod-title">
+      <h2 id="intro-prod-title">Nuestros favoritos</h2>
+      <p class="muted">Algunos productos destacados. Visita la página de productos para más detalles.</p>
+
+      <div class="teaser-grid" role="list">
+        <article class="teaser-card fade-in" role="listitem">
+          <img src="img/img2.jpg" alt="Torta especial" loading="lazy">
+          <h3>Torta Especial</h3>
+          <p>Torta de 3 niveles con decoración personalizada.</p>
+        </article>
+
+        <article class="teaser-card fade-in" role="listitem">
+          <img src="img/img3.jpg" alt="Cupcakes decorados" loading="lazy">
+          <h3>Cupcakes Decorados</h3>
+          <p>Pack de 5 cupcakes con frosting artesanal y toppers.</p>
+        </article>
+
+        <article class="teaser-card fade-in" role="listitem">
+          <img src="img/img4.png" alt="Galletas artesanales" loading="lazy">
+          <h3>Galletas Artesanales</h3>
+          <p>Galletas personalizadas para eventos y recuerdos.</p>
+        </article>
+      </div>
+    </section>
+
+    
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+      <nav aria-label="Enlaces de pie de página">
+        <a href="index.html" class="footer-link">Inicio</a>
+        <a href="productos.html" class="footer-link">Productos</a>
+        <a href="sobre-nosotros.html" class="footer-link">Sobre Nosotros</a>
+        <a href="contacto.html" class="footer-link">Contacto</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle navegación (hamburger)
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+      mainNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
