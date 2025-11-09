@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Kitty Bakery — Servicios</title>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8"> <!-- Define la codificación de caracteres (permite tildes y eñes) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive -->
+  <title>Sweet Kitty Bakery — Servicios</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Ícono del sitio (favicon) -->
   <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes importadas desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Enlace a la hoja de estilos externa -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- ===========================================
+       ENCABEZADO PRINCIPAL DEL SITIO
+  ============================================ -->
   <header id="main-header" class="site-header">
     <div class="container header-inner">
+      
+      <!-- Logo y nombre de la marca con enlace al inicio -->
       <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <!-- SVG decorativo del logo -->
         <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="g1" x1="0" x2="1">
@@ -19,18 +33,23 @@
               <stop offset="1" stop-color="#ffd6e8"/>
             </linearGradient>
           </defs>
+          <!-- Círculo con degradado -->
           <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <!-- Boca (línea curva) -->
           <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Ojos -->
           <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
           <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
         </svg>
         <span class="brand-title">Sweet Kitty Bakery</span>
       </a>
 
+      <!-- Botón de menú para vista móvil -->
       <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="main-nav-3" aria-label="Abrir menú">
         <span class="hamburger"></span>
       </button>
 
+      <!-- Menú de navegación principal -->
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -44,44 +63,64 @@
     </div> 
   </header>
 
+  <!-- ===========================================
+       CONTENIDO PRINCIPAL DE LA PÁGINA
+  ============================================ -->
   <main class="container">
+    <!-- Sección principal de servicios -->
     <section class="servicios-section" id="servicios">
-  <h2>Nuestros Servicios</h2>
-  <p>
-    En <strong>Sweet Kitty Bakery</strong> no solo vendemos postres: brindamos experiencias dulces.
-    Ofrecemos una variedad de servicios personalizados para cada ocasión.
-  </p>
+      <h2>Nuestros Servicios</h2>
 
-  <div class="services-grid">
-    <article class="service-card">
-      <img src="img/img12.jpg" alt="Servicio de tortas personalizadas">
-      <h3>Tortas Personalizadas</h3>
-      <p>Diseñadas a tu gusto para cumpleaños, bodas o cualquier evento especial.</p>
-    </article>
+      <p>
+        En <strong>Sweet Kitty Bakery</strong> no solo vendemos postres: brindamos experiencias dulces.
+        Ofrecemos una variedad de servicios personalizados para cada ocasión.
+      </p>
 
-    <article class="service-card">
-      <img src="img/img13.webp" alt="Decoración de postres y mesas dulces">
-      <h3>Decoración de Postres</h3>
-      <p>Mesas temáticas y postres decorados para eventos inolvidables.</p>
-    </article>
+      <!-- Cuadrícula de tarjetas con los servicios -->
+      <div class="services-grid">
+        
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <img src="img/img12.jpg" alt="Servicio de tortas personalizadas">
+          <h3>Tortas Personalizadas</h3>
+          <p>Diseñadas a tu gusto para cumpleaños, bodas o cualquier evento especial.</p>
+        </article>
 
-    <article class="service-card">
-      <img src="img/img16.jpeg" alt="Servicio de delivery de pasteles">
-      <h3>Delivery</h3>
-      <p>Llevamos tus pedidos directamente a tu hogar, frescos y con todo el amor.</p>
-    </article>
-  </div>
-</section>
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <img src="img/img13.webp" alt="Decoración de postres y mesas dulces">
+          <h3>Decoración de Postres</h3>
+          <p>Mesas temáticas y postres decorados para eventos inolvidables.</p>
+        </article>
 
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <img src="img/img16.jpeg" alt="Servicio de delivery de pasteles">
+          <h3>Delivery</h3>
+          <p>Llevamos tus pedidos directamente a tu hogar, frescos y con todo el amor.</p>
+        </article>
+
+      </div>
+    </section>
   </main>
 
+  <!-- ===========================================
+       PIE DE PÁGINA
+  ============================================ -->
   <footer id="main-footer" class="site-footer">
     <div class="container footer-inner">
+      <!-- Año dinámico (se actualiza automáticamente con JavaScript) -->
       <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
       <a href="index.html" class="footer-link">Volver al inicio</a>
     </div>
   </footer>
 
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <!-- ===========================================
+       SCRIPT: Inserta automáticamente el año actual
+  ============================================ -->
+  <script>
+    // Corrige el ID del span (debe ser "year2" para coincidir con el HTML)
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
