@@ -1,37 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- Indica que el documento está en español -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Contacto Sweet Kitty Bakery — formulario accesible y datos de contacto.">
-  <title>Sweet Kitty Bakery — Contacto</title>
+  <meta charset="utf-8"> <!-- Soporte para caracteres especiales -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Diseño adaptable a móviles -->
+  <meta name="description" content="Contacto Sweet Kitty Bakery — formulario accesible y datos de contacto."> <!-- Descripción para SEO -->
+  <title>Sweet Kitty Bakery — Contacto</title> <!-- Título que aparece en la pestaña del navegador -->
+
+  <!-- Ícono del sitio -->
   <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes de Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- ENCABEZADO (Header con logo y navegación principal) -->
   <header id="main-header" class="site-header">
     <div class="container header-inner">
+      <!-- Enlace al inicio con logo SVG -->
       <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <!-- LOGO en formato SVG -->
         <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
+            <!-- Gradiente para el círculo -->
             <linearGradient id="g1" x1="0" x2="1">
               <stop offset="0" stop-color="#ff7ab6"/>
               <stop offset="1" stop-color="#ffd6e8"/>
             </linearGradient>
           </defs>
+          <!-- Círculo base -->
           <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <!-- Curva simulando sonrisa -->
           <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Ojos -->
           <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
           <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
         </svg>
+        <!-- Nombre de la marca -->
         <span class="brand-title">Sweet Kitty Bakery</span>
       </a>
 
+      <!-- Botón del menú hamburguesa (solo visible en móviles) -->
       <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="main-nav-3" aria-label="Abrir menú">
         <span class="hamburger"></span>
       </button>
 
+      <!-- Menú principal -->
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -45,16 +62,21 @@
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="container contact-main" id="contacto" aria-labelledby="contacto-title">
+    <!-- Título de la página -->
     <h1 id="contacto-title">Contáctanos</h1>
     <p>¿Tienes un pedido especial o consulta? Escríbenos, ¡te responderemos pronto!</p>
 
+    <!-- Imagen decorativa centrada -->
     <figure class="center-img">
       <img src="img/img9.avif" alt="Decorando una torta" loading="lazy">
       <figcaption class="sr-only">Decorando una torta en Sweet Kitty Bakery</figcaption>
     </figure>
 
+    <!-- Sección dividida en dos columnas: información y formulario -->
     <div class="contact-grid">
+      <!-- COLUMNA 1: Información de contacto -->
       <section class="contact-info" aria-labelledby="info-title">
         <h2 id="info-title">Información</h2>
         <p><strong>Dirección:</strong> Calle Dulce 123, Ciudad Pastel</p>
@@ -68,30 +90,37 @@
         </div>
       </section>
 
+      <!-- COLUMNA 2: Formulario de contacto -->
       <section class="contact-form" aria-labelledby="form-title">
         <h2 id="form-title">Envíanos un mensaje</h2>
 
+        <!-- Formulario accesible -->
         <form id="contact-form" action="#" method="post" novalidate>
+          <!-- Campo de nombre -->
           <div class="form-group">
             <label for="name">Nombre completo</label>
             <input id="name" name="name" type="text" required aria-required="true" placeholder="Tu nombre">
           </div>
 
+          <!-- Campo de email -->
           <div class="form-group">
             <label for="email">Correo electrónico</label>
             <input id="email" name="email" type="email" required aria-required="true" placeholder="tu@ejemplo.com">
           </div>
 
+          <!-- Campo de teléfono (opcional, con patrón) -->
           <div class="form-group">
             <label for="phone">Teléfono</label>
             <input id="phone" name="phone" type="tel" pattern="[0-9()+-\s]{7,20}" placeholder="(123) 456-7890">
           </div>
 
+          <!-- Campo de mensaje -->
           <div class="form-group">
             <label for="message">Mensaje</label>
             <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Escribe tu mensaje"></textarea>
           </div>
 
+          <!-- Botón de envío -->
           <div class="form-group">
             <button type="submit" class="btn">Enviar mensaje</button>
           </div>
@@ -100,39 +129,45 @@
     </div>
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer id="main-footer" class="site-footer">
     <div class="container footer-inner">
+      <!-- Año dinámico -->
       <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
       <a href="index.html" class="footer-link">Volver al inicio</a>
     </div>
   </footer>
 
+  <!-- SCRIPT: funciones interactivas -->
   <script>
-    document.getElementById('year3').textContent = new Date().getFullYear();
+    // CORREGIR: el ID correcto es 'year2' (no 'year3')
+    document.getElementById('year2').textContent = new Date().getFullYear();
 
-    // validación simple y simulación de envío 
+    // Validación simple del formulario y simulación de envío
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function(e){
-      if(!form.checkValidity()){
-        e.preventDefault();
-        form.reportValidity();
+      if(!form.checkValidity()){      // Si algún campo no es válido
+        e.preventDefault();           // Detiene el envío
+        form.reportValidity();        // Muestra los mensajes de error
       } else {
-        e.preventDefault();
+        e.preventDefault();           // Evita recargar la página
         alert('Gracias — tu mensaje ha sido recibido (simulación para entrega).');
-        form.reset();
+        form.reset();                 // Limpia el formulario
       }
     });
 
-    // hamburger toggle
+    // Menú hamburguesa (para pantallas pequeñas)
     const navToggle3 = document.getElementById('nav-toggle-3');
-    const mainNav3 = document.getElementById('main-nav-3');
+   
+    const mainNav3 = document.getElementById('main-nav');
     if(navToggle3){
       navToggle3.addEventListener('click', () => {
         const expanded = navToggle3.getAttribute('aria-expanded') === 'true' || false;
         navToggle3.setAttribute('aria-expanded', !expanded);
-        mainNav3.classList.toggle('open');
+        mainNav3.classList.toggle('open'); // Activa/desactiva el menú
       });
     }
   </script>
 </body>
 </html>
+
