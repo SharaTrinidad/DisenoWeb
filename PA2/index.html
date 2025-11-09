@@ -1,48 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Sweet Kitty Bakery - Pastelería artesanal: tortas, cupcakes y postres personalizados.">
-  <meta name="keywords" content="pastelería, tortas, cupcakes, galletas, repostería artesanal">
-  <meta name="author" content="Sweet Kitty Bakery">
-  <meta name="theme-color" content="#fff6fb">
-  <title>Sweet Kitty Bakery — Inicio</title>
+<html lang="es"> <!-- Define el tipo de documento y el idioma (español) -->
 
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="utf-8"> <!-- Permite usar caracteres especiales (tildes, ñ, etc.) -->
+  <meta name="viewport" content="width=device-width,initial-scale=1"> <!-- Ajusta el diseño al ancho del dispositivo -->
+  <meta name="description" content="Sweet Kitty Bakery - Pastelería artesanal: tortas, cupcakes y postres personalizados."> <!-- Descripción para buscadores -->
+  <meta name="keywords" content="pastelería, tortas, cupcakes, galletas, repostería artesanal"> <!-- Palabras clave SEO -->
+  <meta name="author" content="Sweet Kitty Bakery"> <!-- Autor del sitio -->
+  <meta name="theme-color" content="#fff6fb"> <!-- Color del tema (para navegadores móviles) -->
+  <title>Sweet Kitty Bakery — Inicio</title> <!-- Título que se muestra en la pestaña del navegador -->
+
+  <!-- Ícono de la página -->
   <link rel="icon" href="img/img10.png" type="image/x-icon">
 
-  <!-- Fuentes Google  -->
+  <!-- Fuentes importadas desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
+  <!-- Enlace al archivo CSS principal -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <!-- HEADER (logo + nav). SVG inline cumple requisito SVG -->
+  <!-- HEADER: incluye el logo y el menú de navegación -->
   <header id="main-header" class="site-header" role="banner">
     <div class="container header-inner">
+      <!-- Enlace al inicio con el logo de la marca -->
       <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
-        <!-- SVG decorativo (logo vectorial escalable) -->
+        <!-- SVG decorativo: logo vectorial (gatito con gradiente) -->
         <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
+            <!-- Definición del degradado para el círculo -->
             <linearGradient id="g1" x1="0" x2="1">
               <stop offset="0" stop-color="#ff7ab6"/>
               <stop offset="1" stop-color="#ffd6e8"/>
             </linearGradient>
           </defs>
+          <!-- Círculo del fondo -->
           <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <!-- Sonrisa del gatito -->
           <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Ojos -->
           <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
           <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
         </svg>
+        <!-- Nombre de la marca -->
         <span class="brand-title">Sweet Kitty Bakery</span>
       </a>
 
+      <!-- Botón del menú (modo móvil) -->
       <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
-        <span class="hamburger"></span>
+        <span class="hamburger"></span> <!-- Ícono del menú hamburguesa -->
       </button>
 
+      <!-- Navegación principal -->
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
         <ul class="nav-list">
+          <!-- Enlaces del menú -->
           <li><a href="index.html" class="nav-link">Inicio</a></li>
           <li><a href="productos.html" class="nav-link">Productos</a></li>
           <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
@@ -54,24 +68,31 @@
     </div>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main id="main-content">
-    <!-- HERO: figure + figcaption -->
+    <!-- Sección HERO (portada principal con imagen y texto) -->
     <section id="inicio" class="hero-section container" aria-labelledby="hero-title">
+      <!-- Imagen destacada -->
       <figure class="hero-figure">
         <picture>
           <img src="img/img1.webp" alt="Imagen principal de Sweet Kitty Bakery" class="hero-img" loading="lazy">
         </picture>
+        <!-- Descripción alternativa accesible solo para lectores de pantalla -->
         <figcaption class="sr-only">Mostrador con productos de Sweet Kitty Bakery</figcaption>
       </figure>
 
+      <!-- Texto principal del hero -->
       <div class="hero-text">
         <h1 id="hero-title">Dulces que enamoran</h1>
         <p>Pastelería artesanal · Pedidos personalizados · Ingredientes frescos</p>
+
+        <!-- Botones de acción -->
         <div class="hero-actions">
           <a class="btn" href="productos.html">Ver productos</a>
           <a class="btn btn-ghost" href="contacto.html">Contactar</a>
         </div>
 
+        <!-- Lista de categorías -->
         <ul class="hero-cats" aria-label="Categorías">
           <li>Tortas</li>
           <li>Cupcakes</li>
@@ -81,23 +102,28 @@
       </div>
     </section>
 
+    <!-- Sección de productos destacados -->
     <section class="intro-products container" aria-labelledby="intro-prod-title">
       <h2 id="intro-prod-title">Nuestros favoritos</h2>
       <p class="muted">Algunos productos destacados. Visita la página de productos para más detalles.</p>
 
+      <!-- Contenedor de tarjetas de productos -->
       <div class="teaser-grid" role="list">
+        <!-- Tarjeta 1 -->
         <article class="teaser-card fade-in" role="listitem">
           <img src="img/img2.jpg" alt="Torta especial" loading="lazy">
           <h3>Torta Especial</h3>
           <p>Torta de 3 niveles con decoración personalizada.</p>
         </article>
 
+        <!-- Tarjeta 2 -->
         <article class="teaser-card fade-in" role="listitem">
           <img src="img/img3.jpg" alt="Cupcakes decorados" loading="lazy">
           <h3>Cupcakes Decorados</h3>
           <p>Pack de 5 cupcakes con frosting artesanal y toppers.</p>
         </article>
 
+        <!-- Tarjeta 3 -->
         <article class="teaser-card fade-in" role="listitem">
           <img src="img/img4.png" alt="Galletas artesanales" loading="lazy">
           <h3>Galletas Artesanales</h3>
@@ -105,14 +131,15 @@
         </article>
       </div>
     </section>
-
-    
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (pie de página) -->
   <footer id="main-footer" class="site-footer" role="contentinfo">
     <div class="container footer-inner">
+      <!-- Copyright con año dinámico -->
       <p>&copy; <span id="year"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+
+      <!-- Enlaces del footer -->
       <nav aria-label="Enlaces de pie de página">
         <a href="index.html" class="footer-link">Inicio</a>
         <a href="productos.html" class="footer-link">Productos</a>
@@ -122,18 +149,24 @@
     </div>
   </footer>
 
+  <!-- SCRIPT: funciones interactivas -->
   <script>
-    // año dinámico
+    // Inserta automáticamente el año actual en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle navegación (hamburger)
+    // Control del menú de navegación (abrir/cerrar al hacer clic)
     const navToggle = document.getElementById('nav-toggle');
     const mainNav = document.getElementById('main-nav');
+
     navToggle.addEventListener('click', () => {
+      // Cambia el estado del atributo aria-expanded
       const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
       navToggle.setAttribute('aria-expanded', !expanded);
+
+      // Muestra u oculta el menú
       mainNav.classList.toggle('open');
     });
   </script>
 </body>
 </html>
+
