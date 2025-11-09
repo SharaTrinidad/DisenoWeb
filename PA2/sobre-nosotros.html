@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sweet Kitty Bakery — Sobre Nosotros</title>
+  <!-- ===========================================
+       CONFIGURACIÓN BÁSICA DEL DOCUMENTO
+  ============================================ -->
+  <meta charset="UTF-8"> <!-- Permite el uso de tildes y eñes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño adaptable a distintos dispositivos -->
+  <title>Sweet Kitty Bakery — Sobre Nosotros</title> <!-- Título visible en la pestaña del navegador -->
+
+  <!-- Ícono del sitio (favicon) -->
   <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes importadas desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+  <!-- ===========================================
+       ENCABEZADO PRINCIPAL (HEADER)
+  ============================================ -->
   <header id="main-header" class="site-header">
     <div class="container header-inner">
+
+      <!-- Logo y nombre de la marca -->
       <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <!-- Logotipo vectorial SVG con degradado y detalles decorativos -->
         <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="g1" x1="0" x2="1">
@@ -19,18 +35,23 @@
               <stop offset="1" stop-color="#ffd6e8"/>
             </linearGradient>
           </defs>
+          <!-- Fondo circular con degradado -->
           <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <!-- Boca (curva inferior del logo) -->
           <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Ojos -->
           <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
           <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
         </svg>
         <span class="brand-title">Sweet Kitty Bakery</span>
       </a>
 
+      <!-- Botón hamburguesa para menú responsive -->
       <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="main-nav-3" aria-label="Abrir menú">
         <span class="hamburger"></span>
       </button>
 
+      <!-- Menú principal de navegación -->
       <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
         <ul class="nav-list">
           <li><a href="index.html" class="nav-link">Inicio</a></li>
@@ -44,30 +65,48 @@
     </div>
   </header>
 
+  <!-- ===========================================
+       SECCIÓN: SOBRE NOSOTROS
+  ============================================ -->
   <section class="sobre-nosotros" id="nosotros">
-  <h2>Sobre Nosotros</h2>
-  <p>
-    En <strong>Sweet Kitty Bakery</strong> creamos dulzura con pasión. Cada producto
-    está hecho con amor, ingredientes frescos y una sonrisa.
-  </p>
+    <h2>Sobre Nosotros</h2>
 
-  <img src="img/img15.jpg" alt="Equipo de pastelería trabajando con amor">
+    <!-- Descripción principal -->
+    <p>
+      En <strong>Sweet Kitty Bakery</strong> creamos dulzura con pasión. 
+      Cada producto está hecho con amor, ingredientes frescos y una sonrisa.
+    </p>
 
-  <ul>
-    <li>Ingredientes frescos</li>
-    <li>Diseños personalizados</li>
-    <li>Amor en cada receta</li>
-  </ul>
-</section>
+    <!-- Imagen ilustrativa del equipo -->
+    <img src="img/img15.jpg" alt="Equipo de pastelería trabajando con amor">
 
+    <!-- Lista de valores principales -->
+    <ul>
+      <li>Ingredientes frescos</li>
+      <li>Diseños personalizados</li>
+      <li>Amor en cada receta</li>
+    </ul>
+  </section>
 
+  <!-- ===========================================
+       PIE DE PÁGINA (FOOTER)
+  ============================================ -->
   <footer id="main-footer" class="site-footer">
     <div class="container footer-inner">
+      <!-- Año dinámico que se actualiza automáticamente -->
       <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
       <a href="index.html" class="footer-link">Volver al inicio</a>
     </div>
   </footer>
 
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <!-- ===========================================
+       SCRIPT: Año actual en el footer
+  ============================================ -->
+  <script>
+    // Corrige el ID para coincidir con el span del HTML
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
