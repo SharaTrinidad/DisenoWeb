@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Kitty Bakery — Blog</title>
+  <link rel="icon" href="img/img10.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="main-header" class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery - Inicio">
+        <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff7ab6"/><stop offset="1" stop-color="#ffd6e8"/></linearGradient></defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="24" cy="28" r="2.4" fill="#3a2740"/><circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
+        </svg>
+        <span class="brand-title">Sweet Kitty Bakery</span>
+      </a>
+
+      <button id="nav-toggle-3" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container blog-section">
+    <h2>Blog</h2>
+    <p>Consejos, novedades y recetas exclusivas de nuestro equipo pastelero.</p>
+
+    <div class="blog-grid">
+      <article class="blog-post" data-id="post-cupcakes">
+        <img src="img/img11.jpeg" alt="Cupcakes decorados con múltiples colores">
+        <h3>Decoración de cupcakes: trucos y tendencias</h3>
+        <p>Aprende los mejores tips para lograr cupcakes dignos de exposición.</p>
+      </article>
+
+      <article class="blog-post" data-id="post-torta">
+        <img src="img/img12.jpg" alt="Torta decorada profesionalmente">
+        <h3>Cómo elegir la torta perfecta para tu evento</h3>
+        <p>Guía práctica para seleccionar el diseño y sabor ideal.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer id="main-footer" class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+      <a href="index.html" class="footer-link">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

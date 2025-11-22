@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Ajuste para que el sitio sea responsive en móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sweet Kitty Bakery — Sobre Nosotros</title>
+
+  <!-- Icono del sitio en pestaña/navegador -->
+  <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Importación de fuentes externas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos principales del sitio -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Header principal que contiene logo y navegación -->
+  <header id="main-header" class="site-header">
+    <div class="container header-inner">
+
+      <!-- Enlace al inicio + logo en SVG (mejor calidad y peso reducido) -->
+      <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+
+        <!-- Logo: diseño basado en círculo y rasgos simples -->
+        <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+
+          <!-- Degradado que mantiene consistencia visual en todas las páginas -->
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff7ab6"/>
+              <stop offset="1" stop-color="#ffd6e8"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Elementos gráficos -->
+          <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <path d="M20 40c4 8 24 8 28 0"
+                stroke="#3a2740" stroke-width="2"
+                fill="none" stroke-linecap="round"/>
+
+          <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
+          <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
+        </svg>
+
+        <span class="brand-title">Sweet Kitty Bakery</span>
+      </a>
+
+      <!-- Botón hamburguesa para menú responsive -->
+      <button id="nav-toggle-3" class="nav-toggle"
+              aria-expanded="false" aria-controls="main-nav"
+              aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Navegación principal -->
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+
+          <!-- Marca la página actual con la clase active -->
+          <li><a href="sobre-nosotros.html" class="nav-link active">Sobre Nosotros</a></li>
+
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main>
+
+    <!-- Sección dedicada a la presentación de la marca -->
+    <section class="sobre-nosotros" id="nosotros">
+
+      <!-- Título principal -->
+      <h2>Sobre Nosotros</h2>
+
+      <!-- Descripción corta de identidad -->
+      <p>
+        En <strong>Sweet Kitty Bakery</strong> creamos dulzura con pasión.
+        Cada producto está hecho con amor, ingredientes frescos y una sonrisa.
+      </p>
+
+      <!-- Imagen representativa del equipo o ambiente de trabajo -->
+      <img src="img/img15.jpg" alt="Equipo de pastelería trabajando con amor">
+
+      <!-- Valores principales expresados en lista simple -->
+      <ul>
+        <li>Ingredientes frescos</li>
+        <li>Diseños personalizados</li>
+        <li>Amor en cada receta</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer general presente en todo el sitio -->
+  <footer id="main-footer" class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- Año dinámico actualizado desde app.js -->
+      <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+
+      <a href="index.html" class="footer-link">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <!-- Script global con funciones como menú móvil y año automático -->
+  <script src="js/app.js" defer></script>
+</body>
+</html>

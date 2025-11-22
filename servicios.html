@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Configuración responsive para móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sweet Kitty Bakery — Servicios</title>
+
+  <!-- Icono del sitio -->
+  <link rel="icon" href="img/img10.png" type="image/x-icon">
+
+  <!-- Fuentes externas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Header con logo, menú y navegación principal -->
+  <header id="main-header" class="site-header">
+    <div class="container header-inner">
+
+      <!-- Logo + enlace a inicio. SVG optimizado para mantener calidad -->
+      <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <!-- Uso de degradado para mantener identidad visual -->
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#ff7ab6"/>
+              <stop offset="1" stop-color="#ffd6e8"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Elementos que forman el ícono -->
+          <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <path d="M20 40c4 8 24 8 28 0"
+                stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="24" cy="28" r="2.4" fill="#3a2740"/>
+          <circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
+        </svg>
+
+        <span class="brand-title">Sweet Kitty Bakery</span>
+      </a>
+
+      <!-- Menú hamburguesa (versión móvil) -->
+      <button id="nav-toggle-3" class="nav-toggle"
+              aria-expanded="false" aria-controls="main-nav"
+              aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Menú principal -->
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+
+          <!-- Enlaces con clase active para resaltar página actual -->
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link">Productos</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+
+          <!-- Página donde estamos (clase active aplicada) -->
+          <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container">
+
+    <!-- Sección completa de servicios, con estructura centrada -->
+    <section class="servicios-section" id="servicios">
+
+      <!-- Título principal -->
+      <h2>Nuestros Servicios</h2>
+
+      <!-- Texto introductorio con énfasis en experiencia personalizada -->
+      <p>
+        En <strong>Sweet Kitty Bakery</strong> no solo vendemos postres:
+        brindamos experiencias dulces. Ofrecemos una variedad de servicios
+        personalizados para cada ocasión.
+      </p>
+
+      <!-- Cuadrícula de servicios presentada como cards -->
+      <div class="services-grid">
+
+        <!-- Card 1: Tortas personalizadas -->
+        <!-- data-id agregado para facilitar posibles interacciones JS -->
+        <article class="service-card" data-id="serv-tortas">
+          <img src="img/img12.jpg" alt="Servicio de tortas personalizadas">
+
+          <h3>Tortas Personalizadas</h3>
+
+          <!-- Descripción del servicio -->
+          <p>Diseñadas a tu gusto para cumpleaños, bodas o cualquier evento especial.</p>
+        </article>
+
+        <!-- Card 2: Decoración de postres -->
+        <article class="service-card" data-id="serv-deco">
+          <img src="img/img13.webp" alt="Decoración de postres y mesas dulces">
+
+          <h3>Decoración de Postres</h3>
+
+          <p>Mesas temáticas y postres decorados para eventos inolvidables.</p>
+        </article>
+
+        <!-- Card 3: Delivery -->
+        <article class="service-card" data-id="serv-delivery">
+          <img src="img/img16.jpeg" alt="Servicio de delivery de pasteles">
+
+          <h3>Delivery</h3>
+
+          <p>Llevamos tus pedidos directamente a tu hogar, frescos y con todo el amor.</p>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer general -->
+  <footer id="main-footer" class="site-footer">
+    <div class="container footer-inner">
+
+      <!-- Año dinámico (JS lo reemplaza automáticamente) -->
+      <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+
+      <!-- Enlace de navegación secundaria -->
+      <a href="index.html" class="footer-link">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <!-- Archivo JS global. Maneja menú móvil, año dinámico y funciones generales -->
+  <script src="js/app.js" defer></script>
+</body>
+</html>

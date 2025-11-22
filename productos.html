@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Productos de Sweet Kitty: tortas, cupcakes, galletas. Image map y tabla de precios.">
+  <title>Sweet Kitty Bakery — Productos</title>
+  <link rel="icon" href="img/img10.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="main-header" class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Sweet Kitty Bakery">
+        <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff7ab6"/><stop offset="1" stop-color="#ffd6e8"/></linearGradient></defs>
+          <circle cx="32" cy="32" r="30" fill="url(#g1)"/>
+          <path d="M20 40c4 8 24 8 28 0" stroke="#3a2740" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="24" cy="28" r="2.4" fill="#3a2740"/><circle cx="40" cy="28" r="2.4" fill="#3a2740"/>
+        </svg>
+        <span class="brand-title">Sweet Kitty Bakery</span>
+      </a>
+
+      <button id="nav-toggle-2" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Menú principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="productos.html" class="nav-link active">Productos</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="products-section" aria-labelledby="prod-title">
+      <h1 id="prod-title">Nuestros Productos</h1>
+
+      <div class="products-grid fade-in-up" role="list">
+        <article class="product-card" role="listitem" data-id="torta-20">
+          <picture><img src="img/img5.webp" alt="Torta personalizada" loading="lazy"></picture>
+          <div class="card-body">
+            <h3 id="p1-title">Torta personalizada</h3>
+            <p>Tamaño y decoración a pedido.</p>
+            <div class="card-actions">
+              <span class="price">S/ 260</span>
+              <a class="btn" href="contacto.html">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem" data-id="cupcakes-6">
+          <picture><img src="img/img6.webp" alt="Pack de cupcakes" loading="lazy"></picture>
+          <div class="card-body">
+            <h3 id="p2-title">Pack Cupcakes (6)</h3>
+            <p>Variedad de sabores y topping.</p>
+            <div class="card-actions">
+              <span class="price">S/ 75</span>
+              <a class="btn" href="contacto.html">Pedir</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" role="listitem" data-id="galletas-evento">
+          <picture><img src="img/img7.jpg" alt="Galletas decoradas" loading="lazy"></picture>
+          <div class="card-body">
+            <h3 id="p3-title">Galletas Decoradas</h3>
+            <p>Personalizables para eventos.</p>
+            <div class="card-actions">
+              <span class="price">S/ 45</span>
+              <a class="btn" href="contacto.html">Pedir</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <section class="map-section" aria-labelledby="map-title">
+        <h2 id="map-title">Haz clic en la torta para ver tamaños</h2>
+        <figure class="map-figure">
+          <img src="img/img8.jpg" alt="Mapa interactivo de torta" usemap="#torta-map" loading="lazy">
+          <figcaption class="sr-only">Mapa con áreas clicables</figcaption>
+        </figure>
+
+        <map name="torta-map" id="torta-map">
+          <area shape="rect" coords="60,220,280,420" href="#tabla-precios" alt="Pequeña (20cm)" title="Pequeña (20cm)">
+          <area shape="rect" coords="320,160,580,420" href="#tabla-precios" alt="Mediana (30cm)" title="Mediana (30cm)">
+          <area shape="rect" coords="620,120,860,420" href="#tabla-precios" alt="Grande (40cm)" title="Grande (40cm)">
+        </map>
+      </section>
+
+      <section id="tabla-precios" class="table-section" aria-labelledby="table-title">
+        <h2 id="table-title">Comparativa de tamaños y precios</h2>
+        <div class="table-wrap">
+          <table class="styled-table" summary="Comparativa de tamaños de torta, porciones y precios">
+            <caption class="sr-only">Tabla de tamaños, porciones y precios</caption>
+            <thead><tr><th>Tamaño</th><th>Diámetro</th><th>Porciones aprox.</th><th>Precio</th></tr></thead>
+            <tbody>
+              <tr><td>Pequeña</td><td>20 cm</td><td>8 - 12</td><td>S/ 260</td></tr>
+              <tr><td>Mediana</td><td>30 cm</td><td>16 - 24</td><td>S/ 420</td></tr>
+              <tr><td>Grande</td><td>40 cm</td><td>30 - 40</td><td>S/ 650</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer id="main-footer" class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year2"></span> Sweet Kitty Bakery. Todos los derechos reservados.</p>
+      <a href="index.html" class="footer-link">Volver al inicio</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
